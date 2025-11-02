@@ -1,13 +1,12 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 
-// Mengarahkan ke file yang sudah diganti nama di folder 'views'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    component: () => import('@/views/CryptoTracker.vue')
+    // Import diperbarui untuk memuat komponen Weather yang baru
+    component: () => import('@/views/Weather.vue')
   }
-  // Semua rute tabs lama dihilangkan
 ]
 
 const router = createRouter({
