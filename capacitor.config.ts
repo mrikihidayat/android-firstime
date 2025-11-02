@@ -5,10 +5,20 @@ const config: CapacitorConfig = {
   appName: 'test',
   webDir: 'dist',
 
-  server: {
-    // Ganti 192.168.x.x dengan IP lokal komputer Anda yang sebenarnya
-    url: 'http://192.168.1.7:8100', 
-    cleartext: true, // Untuk koneksi HTTP di Android versi baru
+  // server: {
+  //   url: 'http://192.168.1.2:8100', 
+  //   cleartext: true, 
+  // },
+  
+  assets: {
+    icon: {
+      sources: [
+        { 
+          src: 'resources/icon.png', 
+          platform: 'android' 
+        } 
+      ]
+    }
   }
 };
 

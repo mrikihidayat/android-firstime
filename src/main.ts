@@ -4,8 +4,8 @@ import router from './router';
 
 import { IonicVue } from '@ionic/vue';
 
-// 👇 BARIS BARU: Import defineCustomElements dari PWA Elements
-// import { defineCustomElements } from '@ionic/pwa-elements/loader'; 
+// 👇 BARIS BARU: Import defineCustomElements dari PWA Elements (DIHAPUS KOMENTARNYA)
+import { defineCustomElements } from '@ionic/pwa-elements/loader'; 
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
@@ -16,7 +16,10 @@ import '@ionic/vue/css/core.css';
 import './theme/variables.css';
 
 // 👇 BARIS BARU: Panggil defineCustomElements sebelum createApp()
-defineCustomElements(window); 
+// Memberi tahu TypeScript bahwa modul ini ada.
+declare module '@ionic/pwa-elements/loader' {
+  export function defineCustomElements(win: any, opts?: any): void;
+}
 
 const app = createApp(App)
   .use(IonicVue)
