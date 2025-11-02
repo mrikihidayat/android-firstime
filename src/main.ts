@@ -5,7 +5,7 @@ import router from './router';
 import { IonicVue } from '@ionic/vue';
 
 // 👇 BARIS BARU: Import defineCustomElements dari PWA Elements
-import { defineCustomElements } from '@ionic/pwa-elements/loader'; 
+// import { defineCustomElements } from '@ionic/pwa-elements/loader'; 
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
